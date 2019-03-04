@@ -8,6 +8,27 @@ Originally, we didnt know much about the mechanics of Robocode or the specific c
 
 ## Design Overview
 
+```
+Run
+	Turn Radar Right until enemy is found. 
+	
+On Scanning a Robot
+	Check if they're the sentryBot. Exit to run if they are.
+	Turn to face them.
+	SmartFire at them.
+	Move towards them.
+	Scan again to make check if they've moved.
+	
+On Ramming a Robot
+	Turn to face them.
+	SmartFire at them.
+	Ram them.
+
+SmartFire
+	Check if we are able to fire, if so, fire.
+	If not, return to Run.
+```
+
 #### Scanning
 ```java
 while (true) {
