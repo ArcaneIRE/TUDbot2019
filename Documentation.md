@@ -12,7 +12,15 @@ public int smartFire() {
 		return 1;
 	} else {
 		return 0;
-	}
+	}//END IF ELSE
 }
 ```
 To ensure no turns are wasted with `fire()` calls while we have an overheated gun, we developed this *very intelligent* function to use instead of the standard `fire()`.
+
+#### Scanning
+```java
+while (true) {
+	turnRadarRight(45 * turnDirection);
+}//END WHILE
+```
+Because the different components of your Robot and the Robot itself have varying turn rates, we decided to turn the radar to scan and then turn the body once we find the enemy. It's turn rate is %450 faster than turning the entire Robot. In most scenarios this saves us at least one turn. We are able to very quickly find the enemy at the start of the round.
