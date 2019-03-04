@@ -8,6 +8,7 @@ Originally, we didnt know much about the mechanics of Robocode or the specific c
 
 ## Design Overview
 
+#### Pseudocode
 ```
 Run
 	Turn Radar Right until enemy is found. 
